@@ -3,39 +3,34 @@ public class MaxSalt {
 
     }
     public String maxAmountOfSalt(String gender, int age) {
-        String message = "";
-        String invalidInputMessage = "Invalid Input";
+        String msg = "";
         if (gender.equals("M")) {
-            if (age < 0) {
-                message = invalidInputMessage;
+            if (age < 0 || age > 18) {
+                msg = "Invalid Input";
             } else if (age <= 2) {
-                message += "3 grams";
+                msg = "3 grams";
             } else if (age <= 5) {
-                message += "4 grams";
+                msg = "4 grams";
             } else if (age <= 7) {
-                message += "5 grams";
+                msg = "5 grams";
             } else if (age <= 11) {
-                message += "6.5 grams";
-            } else if (age <= 18) {
-                message += "8 grams";
+                msg = "6.5 grams";
             } else {
-                message = invalidInputMessage;
+                msg = "8 grams";
             }
         } else {
-            if (age < 0) {
-                message = invalidInputMessage;
+            if (age < 0 || age > 18) {
+                msg = "Invalid Input";
             } else if (age <= 2) {
-                message += "3.5 grams";
+                msg = "3.5 grams";
             } else if (age <= 5) {
-                message += "4.5 grams";
+                msg = "4.5 grams";
             } else if (age <= 7) {
-                message += "5.5 grams";
-            } else if (age <= 18) {
-                message += "7 grams";
+                msg = "5.5 grams";
             } else {
-                message = invalidInputMessage;
+                msg = "7 grams";
             }
         }
-        return message;
+        return msg;
     }
 }
